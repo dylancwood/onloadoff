@@ -1,0 +1,329 @@
+/*
+Color Pallete
+: Primary color
+   #1A5396
+: Darker
+   #2D4665
+: Darkest
+   #052751
+: Lighter
+   #6299DB
+: Lightest
+   #92B3DB
+
+: Contrasting Color
+   #E69517
+: Darkest
+   #7B4D04
+: Lighter
+   #F6BD62
+: Lightest
+   #F6D39C
+: Darker
+   #9A763D
+*/
+/*primary font colors*/
+.primary-font-color{ color:#1A5396; }
+.darker-primary-font-color{ color:#2D4665; }
+.darkest-primary-font-color{ color:#052751; }
+.lighter-primary-font-color{ color:#6299DB; }
+.lightest-primary-font-color{ color:#92B3DB; }
+.white-font-color{ color:#fff }
+/*contasting font colors*/
+.contrasting-font-color{ color:#E69517; }
+.darker-contrasting-font-color{ color:#7B4D04; }
+.lighter-contrasting-font-color{ color:#F6BD62; }
+.lightest-contasting-font-color{ color:#F6D39C; }
+.darkest-contasting-font-color{ color:#9A763D; }
+/*primary bg colors*/
+.primary-bg-color{ background-color:#1A5396; }
+.darker-primary-bg-color{ background-color:#2D4665; }
+.darkest-primary-bg-color{ background-color:#052751; }
+.lighter-primary-bg-color{ background-color:#6299DB; }
+.lightest-primary-bg-color{ background-color:#92B3DB; }
+/*contasting bg colors*/
+.contrasting-bg-color{ background-color:#E69517; }
+.darker-contrasting-bg-color{ background-color:#7B4D04; }
+.lighter-contrasting-bg-color{ background-color:#F6BD62; }
+.lightest-contasting-bg-color{ background-color:#F6D39C; }
+.darkest-contasting-bg-color{ background-color:#9A763D; }
+/*primary border colors*/
+.primary-border-color{ border-color:#1A5396; }
+.darker-primary-border-color{ border-color:#2D4665; }
+.darkest-primary-border-color{ border-color:#052751; }
+.lighter-primary-border-color{ border-color:#6299DB; }
+.lightest-primary-border-color{ border-color:#92B3DB; }
+/*contasting border colors*/
+.contrasting-border-color{ border-color:#E69517; }
+.darker-contrasting-border-color{ border-color:#7B4D04; }
+.lighter-contrasting-border-color{ border-color:#F6BD62; }
+.lightest-contasting-border-color{ border-color:#F6D39C; }
+.darkest-contasting-border-color{ border-color:#9A763D; }
+
+html, body{
+   font:1em Helvetica, Georgia, sans-serif; 
+   color:#333; 
+   background:#fff;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   min-width:50em;
+   position:relative;
+}
+input:focus, input:hover{
+    background-color:#F6BD62;
+}
+div.sim-button{
+   font-size: 1em;
+   border-radius:15px;
+   padding:0.5em;
+   text-align:center;
+   margin:10px;
+   opacity:0.8;
+   cursor:pointer;
+}
+div.sim-button:hover{
+   opacity:1;
+   color:#fff;
+}
+#dashboard{
+   font-size:2em;
+   font-weight:bold;
+   position:relative;
+   background-color:#1A5396;
+   padding:20px;
+   margin:0.01em;
+   padding-bottom:1em;
+   outline:0.02em solid #6299DB;
+}
+#dashboard fieldset{
+    font-size:0.5em;
+}
+#dashboard fieldset div.sim-button{
+    display:inline;
+}
+#dashboard:after{
+   background:url('images/byDylanWood_logo_darkbg.png') bottom center no-repeat;
+   background-size:2.5em;
+   width:3em;
+   position:absolute;
+   right:0.3em;
+   bottom:0.2em;
+   display:block;
+   color:transparent;
+   content: 'a';
+}
+#container{ 
+   padding: 0;
+   margin: 0;
+   list-style: none;
+
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex; 
+   width:100%;
+   height:100%;
+
+   -webkit-flex-flow: row;
+   justify-content: space-around;
+}   
+.sub-container{
+    flex-grow:1;
+    margin:5px;
+   position:relative;
+}   
+.header{
+   padding:10px;
+   font-size:1.5em;
+   font-weight:bold;
+   width:90%;
+   margin-left:auto;
+   margin-right:auto;
+   box-shadow: 10px 10px 10px;
+   border:thin solid rgba(1,1,1,0.5);
+   
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex; 
+
+   flex-direction:column;
+   justify-content: space-around;
+}
+.header span{
+   padding: 0;
+   margin-bottom: 0.2em;
+   flex-grow:1;
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex; 
+
+   flex-direction:row;
+   justify-content: flext-start;
+}   
+.header span div {
+   min-height:1em;
+   flex-grow:1;
+   padding:0.2em 0.3em 0 0.3em;
+   width:400px;
+}
+.header span div:fist-child{
+    margin-right:0.2em;
+}
+.header span div:last-child{
+    margin-left:0.2em;
+}
+.timer:before{
+   content:"Time:";
+   margin-right:0.3em;
+}
+.status:before{
+   content:"Status:";
+   margin-right:0.3em;
+}
+
+.header span input[type=text]{
+   font-size:1em;
+   width:100%;
+   border:none;
+   padding:0.2em 0.3em 0 0.3em;
+}
+.sub-container .iframe-container{
+   width:100%;
+   height:100%;
+   position:relative;
+}
+.sub-container iframe{
+   width:100%;
+   height:100%;
+   box-shadow: 10px 10px 10px;
+   background-color:white;
+   position:relative;
+}   
+.sub-container .iframe-statistics{
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   overflow:scroll;
+}
+.sub-container .iframe-statistics>div{
+   margin:1em;
+}
+.log{
+   width:200px;
+   position:fixed;
+   bottom:0px;
+}
+.history{
+   width:100%;
+   display:none;
+   list-style:none;
+   background-color:white;
+   min-height:20px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px;
+}
+.log .header span{
+   width:auto;
+   cursor:pointer;
+}
+.iframe-statistics table{
+    display:inline-block;
+}
+.iframe-statistics th{
+    background-color:#F6D39C;
+    padding:0.2em;
+}
+.iframe-statistics td{
+    background-color:#fff;
+    padding:0.2em;
+    text-align:center;
+}
+.side-chart {
+   display:inline-block;
+   height:250px;
+   width:100%;
+   text-align:center;
+}
+
+.fade-in {
+   /* CSS needed for animation
+   ---------------------------------------------------- */
+   opacity:0.95;
+   -webkit-animation:fadeIn ease-in 1;
+   -moz-animation:fadeIn ease-in 1;
+   -o-animation:fadeIn ease-in 1;
+   animation:fadeIn ease-in 1;
+   -webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards;
+   -o-animation-fill-mode:forwards;
+   animation-fill-mode:forwards;
+   -webkit-animation-duration:200ms;
+   -moz-animation-duration:200ms;
+   -o-animation-duration:200ms;
+   animation-duration:200ms;
+}
+.fade-out {
+   /* CSS needed for animation
+   ---------------------------------------------------- */
+   opacity:1;
+   -webkit-animation:fadeOut ease-in 1;
+   -moz-animation:fadeOut ease-in 1;
+   -o-animation:fadeOut ease-in 1;
+   animation:fadeOut ease-in 1;
+   -webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards;
+   -o-animation-fill-mode:forwards;
+   animation-fill-mode:forwards;
+   -webkit-animation-duration:200ms;
+   -moz-animation-duration:200ms;
+   -o-animation-duration:200ms;
+   animation-duration:200ms;
+}
+@-webkit-keyframes fadeIn {
+   0% { opacity:0; height:0%; display:none; }
+   1% { opacity:0; height:0%; display:block; }
+   100% { opacity:0.98; height:95%; display:block; }
+}
+@-moz-keyframes fadeIn {
+   0% { opacity:0; height:0%; display:none; }
+   1% { opacity:0; height:0%; display:block; }
+   100% { opacity:0.98; height:95%; display:block; }
+}
+@-o-keyframes fadeIn {
+   0% { opacity:0; height:0%; display:none; }
+   1% { opacity:0; height:0%; display:block; }
+   100% { opacity:0.98; height:95%; display:block; }
+}
+@keyframes fadeIn {
+   0% { opacity:0; height:0%; display:none; }
+   1% { opacity:0; height:0%; display:block; }
+   100% { opacity:0.98; height:95%; display:block; }
+}
+@-webkit-keyframes fadeOut {
+   0% { opacity:0.98; height:95%; display:block; }
+   99% { opacity:0; height:0%; display:none; }
+   100% { opacity:0; height:0%; display:none; }
+}
+@-moz-keyframes fadeOut {
+   0% { opacity:0.98; height:95%; display:block; }
+   99% { opacity:0; height:0%; display:none; }
+   100% { opacity:0; height:0%; display:none; }
+}
+@-o-keyframes fadeOut {
+   0% { opacity:0.98; height:95%; display:block; }
+   99% { opacity:0; height:0%; display:none; }
+   100% { opacity:0; height:0%; display:none; }
+}
+@keyframes fadeOut {
+   0% { opacity:0.98; height:95%; display:block; }
+   99% { opacity:0; height:0%; display:none; }
+   100% { opacity:0; height:0%; display:none; }
+}

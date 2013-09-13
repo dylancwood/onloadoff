@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>onLoad-Off by Dylan Wood</title>
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+      <meta charset="utf-8">
+      <link type="image/x-icon" href="images/dw_favicon.ico" rel="shortcut icon"></link>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+      <link href="nvd3/src/nv.d3.css" rel="stylesheet" type="text/css">
+
+      <script type="text/javascript" src="lib.js"></script>
+      <script src="nvd3/lib/d3.v3.js"></script>
+      <script src="nvd3/nv.d3.js"></script>
+      <script src="nvd3/src/tooltip.js"></script>
+      <script src="nvd3/src/utils.js"></script>
+      <script src="nvd3/src/interactiveLayer.js"></script>
+      <script src="nvd3/src/models/legend.js"></script>
+      <script src="nvd3/src/models/axis.js"></script>
+      <script src="nvd3/src/models/scatter.js"></script>
+      <script src="nvd3/src/models/line.js"></script>
+      <script src="nvd3/src/models/lineChart.js"></script>
+      <script src="nvd3/src/models/lineWithFishEye.js"></script>
+   </head>
+   <body>
+      <div id="dashboard">
+         <span><font class="white-font-color">on</font><font class="lighter-primary-font-color">Load</font><font class="contrasting-font-color">Off</font></span>
+         <fieldset>
+            <legend>Auto-test</legend>
+            Reload each frame <input value="30" type="text" /> times.
+            <div class="sim-button contrasting-bg-color">
+               Auto-test
+            </div>
+         </fieldset>
+      </div>
+      <div id="container">
+         <div class="sub-container" id="left_sub_container">
+            <div class="header primary-bg-color">
+               <span>
+                  <input placeholder="http://url.com/1" 
+                     type="text" 
+                     class="lighter-primary-bg-color"
+                     data-side="left"
+                     id="left_iframe_url">
+                  </input>
+               </span>
+               <span>
+                  <div id="left_status" 
+                     class="status lighter-primary-bg-color">
+                  </div>
+                  <div id="left_timer" 
+                     class="timer lighter-primary-bg-color">
+                  </div>
+               </span>
+               <span>
+                  <div data-side="left" 
+                     class="sim-button contrasting-bg-color reload-button">
+                     Reload
+                  </div>
+                  <div data-side="left" 
+                     class="sim-button contrasting-bg-color statistics-button">
+                     Show Statistics
+                  </div>
+               </span>
+            </div>
+            <div class="iframe-container">
+               <iframe data-side="left" 
+                  id="left_iframe" 
+                  src="">
+               </iframe>
+               <div id="left_statistics" 
+                  class="lightest-primary-bg-color iframe-statistics fade-out">
+               </div>
+            </div>
+         </div>
+         <div class="sub-container">
+            <div class="header primary-bg-color">
+               <span>
+                  <input placeholder="http://url.com/2" 
+                     type="text" 
+                     class="lighter-primary-bg-color"
+                     data-side="right"
+                     id="right_iframe_url">
+                  </input>
+               </span>
+               <span>
+                  <div id="right_status" 
+                     class="status lighter-primary-bg-color">
+                  </div>
+                  <div id="right_timer" 
+                     class="timer lighter-primary-bg-color">
+                  </div>
+               </span>
+               <span>
+                  <div data-side="right" 
+                     class="sim-button contrasting-bg-color reload-button">
+                     Reload
+                  </div>
+                  <div data-side="right" 
+                     class="sim-button contrasting-bg-color statistics-button">
+                     Show Statistics
+                  </div>
+               </span>
+            </div>
+            <div class="iframe-container">
+               <iframe data-side="right" 
+                  id="right_iframe" 
+                  src="">
+               </iframe>
+               <div id="right_statistics" 
+                  class="lightest-primary-bg-color iframe-statistics fade-out">
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
