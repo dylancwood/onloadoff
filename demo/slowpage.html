@@ -1,0 +1,6 @@
+<h3>This is a slow page</h3>
+<p>This page loads really slow because inline javascript delays the DOMContentLoaded event</p>
+<script type="text/javascript">
+   var millisecondsToLockupBrowser = 2000, t = new Date().getTime(); 
+   while (new Date().getTime() < t + millisecondsToLockupBrowser);
+</script>

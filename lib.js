@@ -46,12 +46,20 @@ document.addEventListener('DOMContentLoaded',
                }
             }
          );
+         initialize_url_input (elements[i], i);
       }
       //call render_timers: this sets up a requestAnimationFrame callback
       //that re-renders active timers every ~50ms
       render_timers();
    }
 );
+function initialize_url_input (input_el, order) {
+   "use strict";
+   var side = input_el.getAttribute('data-side'),
+      new_url = input_el.value;
+   update_iframe_url(side, new_url);
+   window.setTimeout(function() {reload_iframe(side);}, (order + 2) * 1000); 
+}
 function get_iframe_el (side) {
    "use strict";
    return document.getElementById(side + '_iframe');
